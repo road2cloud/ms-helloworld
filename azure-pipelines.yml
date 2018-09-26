@@ -20,5 +20,5 @@ steps:
     jdkArchitectureOption: 'x64'
     publishJUnitResults: false
     testResultsFiles: '**/TEST-*.xml'
-    goals: 'deploy --settings $(env:DOWNLOADSECUREFILE_SECUREFILEPATH)/settings_azure'
+    goals: "deploy --settings $(settings_azure.secureFilePath)"
 
