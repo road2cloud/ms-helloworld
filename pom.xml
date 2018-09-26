@@ -33,5 +33,16 @@
             </plugin>
         </plugins>
     </build>
+    
+    <repository>
+  <id>dev-azure.com-myfeed</id>
+  <url>https://pkgs.dev.azure.com/mehdihayani-ext0568/_packaging/myfeed/maven/v1</url>
+  <releases>
+    <enabled>true</enabled>
+  </releases>
+  <snapshots>
+    <enabled>true</enabled>
+  </snapshots>
+</repository>
 
 </project>
