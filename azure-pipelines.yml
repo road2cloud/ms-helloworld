@@ -28,5 +28,5 @@ steps:
     jdkArchitectureOption: 'x64'
     publishJUnitResults: false
     testResultsFiles: '**/TEST-*.xml'
-    goals: "deploy -Dautho=$(autho) --settings $DOWNLOADSECUREFILE_SECUREFILEPATH"
+    goals: "deploy -Dautho=$(autho) --settings ./settings-azure1.xml"
 
