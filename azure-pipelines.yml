@@ -10,6 +10,8 @@ pool:
   vmImage: 'Ubuntu 16.04'
 
 steps:
+- bash: echo $AGENT_HOMEDIRECTORY $DOWNLOADSECUREFILE_SECUREFILEPATH
+
 - script: ls
   workingDirectory: $(agent.homeDirectory)
   
