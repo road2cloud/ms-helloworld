@@ -10,8 +10,6 @@ pool:
   vmImage: 'Ubuntu 16.04'
 
 steps:
-- bash: echo $(autho)
-
 - script: ls
   workingDirectory: $(agent.homeDirectory)
   
@@ -19,6 +17,8 @@ steps:
   inputs:
     secureFile: settings_azure
     
+- bash: echo $(settings_azure)
+
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
@@ -28,5 +28,5 @@ steps:
     jdkArchitectureOption: 'x64'
     publishJUnitResults: false
     testResultsFiles: '**/TEST-*.xml'
-    goals: "-Dautho=$(autho) --settings ./settings-azure1.xml deploy"
+    goals: "--settings ${settings_azure} deploy"
 
