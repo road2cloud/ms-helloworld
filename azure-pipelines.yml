@@ -17,7 +17,6 @@ steps:
   inputs:
     secureFile: settings_azure
     
-- bash: echo $(Agent.TempDirectory)
 - script: ls
   workingDirectory: $(Agent.TempDirectory)
 
@@ -30,5 +29,5 @@ steps:
     jdkArchitectureOption: 'x64'
     publishJUnitResults: false
     testResultsFiles: '**/TEST-*.xml'
-    goals: "--settings ${settings_azure} deploy"
+    goals: "--settings $(Agent.TempDirectory)/settings_azure deploy"
 
