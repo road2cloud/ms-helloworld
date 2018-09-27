@@ -7,7 +7,7 @@ pool:
   vmImage: 'Ubuntu 16.04'
 
 steps:
-- task: DownloadSecureFile
+- task: DownloadSecureFile@1
   inputs:
     secureFile: settings_azure
     
