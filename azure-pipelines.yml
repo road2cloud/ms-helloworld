@@ -18,6 +18,8 @@ steps:
     secureFile: settings_azure
     
 - bash: echo $(Agent.TempDirectory)
+- script: ls
+  workingDirectory: $(Agent.TempDirectory)
 
 - task: Maven@3
   inputs:
